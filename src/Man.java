@@ -3,3 +3,4 @@ public class Man {
     String lastName = "Ho";
     int age;
 }
+
