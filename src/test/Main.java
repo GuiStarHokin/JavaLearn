@@ -1,40 +1,32 @@
-/*
 package test;
 
-public abstract class Main {
-    public String name = "John";
-    public int age = 21;
-    public abstract void study();
-    public void testPrint() {
-        System.out.println("This is testPrint");
-    }
-    Third thirdObj = new Third(10);
-    public static class Student extends Main {
-        public int graduationYear = 2018;
-        public void study() {
-            System.out.println("Study all day long");
-        }
-    }
-}*/
 
-
-
-package test;
-
-public abstract class Main {
-    String name = "John";
-    int age = 20;
-    public abstract void study();
-    public void sleep() {
-        System.out.println("I'm going to bed now!");
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Cow myCow = new Cow();
+        Pig myPig = new Pig();
+        myAnimal.animalSound();
+        myCow.animalSound();
+        myPig.animalSound();
     }
 
-    public static class Student extends Main {
-        public int grade = 3;
-        @Override
-        public void study() {
-            System.out.println("Override study");
-        }
+}
 
+class Animal {
+    public void animalSound() {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Cow extends Animal {
+    public void animalSound() {
+        System.out.println("Cow say");
+    }
+}
+
+class Pig extends Animal {
+    public void animalSound() {
+        System.out.println("Pig say");
     }
 }
